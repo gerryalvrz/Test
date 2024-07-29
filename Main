@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conexión con Psicólogos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Conexión con Psicólogos</h1>
+    </header>
+    
+    <main>
+        <section id="contact-form">
+            <h2>Contacta a un Psicólogo</h2>
+            <form id="form">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="issue">Problema a tratar:</label>
+                <textarea id="issue" name="issue" required></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+        
+        <section id="psychologists">
+            <h2>Psicólogos Disponibles</h2>
+            <div class="psychologist">
+                <h3>Dr. Juan Pérez</h3>
+                <p>Especialidad: Psicología Clínica</p>
+                <p>Email: juan.perez@example.com</p>
+            </div>
+            <div class="psychologist">
+                <h3>Dra. María López</h3>
+                <p>Especialidad: Psicología Infantil</p>
+                <p>Email: maria.lopez@example.com</p>
+            </div>
+            <!-- Añadir más psicólogos aquí -->
+        </section>
+    </main>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
+
+
+document.getElementById('form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const issue = document.getElementById('issue').value;
+
+    console.log('Formulario enviado');
+    console.log('Nombre:', name);
+    console.log('Email:', email);
+    console.log('Problema a tratar:', issue);
+
+    alert('Gracias por contactarnos. Un psicólogo se pondrá en contacto contigo pronto.');
+    
+    // Aquí puedes agregar código para enviar los datos del formulario a tu servidor
+});
+
